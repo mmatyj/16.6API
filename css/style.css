@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #e0e0e0;
+  font-family: 'Acme', sans-serif;
+}
+
+body .header h1 {
+  font-size: 40px;
+}
+
+body .header button {
+  width: 200px;
+  height: 50px;
+  margin-top: 25px;
+  border: none;
+  border-radius: 20px;
+  background-color: #f9ef63;
+  cursor: pointer;
+  font-size: 20px;
+  font-family: 'Acme', sans-serif;
+}
+
+body .header input {
+  width: 300px;
+  height: 50px;
+  margin-top: 25px;
+  border: none;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 22px;
+}
+
+body section h2 {
+  font-family: 'Acme', sans-serif;
+  font-size: 25px;
+  margin-left: 15%;
+}
+
+body section ul {
+  margin-left: -40px;
+  padding-left: 90px;
+}
+
+body section ul li {
+  list-style: none;
+  font-family: 'Acme', sans-serif;
+  font-size: 35px;
+}
+
+body section ul li table {
+  min-width: 70%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  background-color: #e0e0e0;
+  border-collapse: collapse;
+}
+
+body section ul li table tr:nth-child(even) {
+  background-color: #82a9ce;
+}
+
+body section ul li table th {
+  width: 250px;
+}
+
+body section ul li table th,
+body section ul li table td {
+  padding: 15px;
+  text-align: left;
+}
+/*# sourceMappingURL=style.css.map */
