@@ -49,14 +49,28 @@ body {
         ul {
             margin-left: -40px;
             padding-left: 90px;
+            width: 100vw;
 
 
             li {
                 list-style: none;
                 font-family: 'Acme', sans-serif;
+                font-size: 50px;
+                margin: 50px 20px;
 
-                font-size: 35px;
+                div {
+                    display: flex;
+                    flex-direction: row-reverse;
+                    justify-content: flex-end;
+                }
 
+                img {
+                    max-width: 100px;
+                    max-height: 60px;
+                    padding: 10px 40px 5px 20px;
+
+
+                }
 
 
                 table {

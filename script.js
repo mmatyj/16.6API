@@ -1,4 +1,4 @@
-var url = 'https://restcountries.eu/rest/v1/name/';
+var url = 'https://restcountries.eu/rest/v2/name/';
 var countriesList = document.getElementById('countries');
 
 document.getElementById('search').addEventListener('click', searchCountries);
@@ -17,7 +17,12 @@ function showCountriesList(resp) {
     countriesList.innerHTML = '';
     resp.forEach(function (item) {
         var liEl = document.createElement('li');
-        liEl.innerText = item.name;
+        var div = document.createElement('div');
+        liEl.append(div)
+        div.innerText = item.name;
+        var img = document.createElement('img');
+        img.src = item.flag;
+        div.append(img);
 
         var table = document.createElement('table');
         var tbody = document.createElement('tbody');
@@ -36,26 +41,21 @@ function showCountriesList(resp) {
         var money = document.createElement('th');
         money.innerText = 'Currency: ';
         var currency = document.createElement('td');
-        currency.innerText = item.currencies;
+        currency.innerText = item.currencies[0].name;
 
         row1.append(money, currency);
 
         var tongue = document.createElement('th');
         tongue.innerText = 'Language: ';
         var language = document.createElement('td');
-        language.innerText = item.languages;
+        language.innerText = item.languages[0].name;
 
         row2.append(tongue, language);
-
-        var img = document.createElement('img');
-        img.src = item.flag;
-        var flag = document.getElementById('flag');
-        flag.append(img);
-
 
         tbody.append(row, row1, row2);
         table.append(tbody);
         liEl.append(table);
+
 
         countriesList.appendChild(liEl);
     });

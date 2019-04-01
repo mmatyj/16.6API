@@ -48,12 +48,33 @@ body section h2 {
 body section ul {
   margin-left: -40px;
   padding-left: 90px;
+  width: 100vw;
 }
 
 body section ul li {
   list-style: none;
   font-family: 'Acme', sans-serif;
-  font-size: 35px;
+  font-size: 50px;
+  margin: 50px 20px;
+}
+
+body section ul li div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+body section ul li img {
+  max-width: 100px;
+  max-height: 60px;
+  padding: 10px 40px 5px 20px;
 }
 
 body section ul li table {
